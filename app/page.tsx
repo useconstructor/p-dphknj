@@ -1,44 +1,20 @@
+import { ArrowRight, Building2, Clock3, Facebook, Grape, Instagram, MapPin, Menu as MenuIcon, Star, Wine } from "lucide-react";
+
+const dishes = [
+  { name: "Burrata e Pomodori", price: "$18", description: "Fresh burrata, heirloom tomatoes, basil, extra virgin olive oil, aged balsamic.", className: "burrata" },
+  { name: "Pappardelle al Ragù", price: "$28", description: "Slow-braised beef, wild herbs, and Parmigiano Reggiano.", className: "pasta" },
+  { name: "Bistecca alla Fiorentina", price: "$68", description: "Tuscan-style T-bone, rosemary, roasted garlic, and sea salt.", className: "steak" },
+  { name: "Tiramisù", price: "$14", description: "Espresso-soaked savoiardi, mascarpone, and dark cocoa.", className: "tiramisu" },
+];
+
 export default function Home() {
-  return (
-    <div>
-      <header style={{background:'#F4EBDD',color:'white',padding:'20px 40px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-        <span style={{fontSize:'1.5rem',fontWeight:'bold'}}>Project 1788850077185</span>
-        <nav style={{display:'flex',gap:'20px'}}>
-          <a href="#nav_sticky" style={{color:'white',textDecoration:'none'}}>nav_sticky</a>
-          <a href="#hero_split" style={{color:'white',textDecoration:'none'}}>hero_split</a>
-          <a href="#stats_banner" style={{color:'white',textDecoration:'none'}}>stats_banner</a>
-          <a href="#about_split" style={{color:'white',textDecoration:'none'}}>about_split</a>
-          <a href="#menu_categories" style={{color:'white',textDecoration:'none'}}>menu_categories</a>
-        </nav>
-      </header>
-      <section style={{background:'#F4EBDD',color:'white',padding:'100px 40px',textAlign:'center'}}>
-        <h1 style={{fontSize:'3rem',fontWeight:'800',marginBottom:'20px'}}>Project 1788850077185</h1>
-        <p style={{fontSize:'1.2rem',opacity:0.85,maxWidth:'600px',margin:'0 auto 40px'}}>La Cucina di Marco is an upscale Italian restaurant website that combines cinematic Tuscan storytelling with menu discovery, guest favorites, and a seamless Turso-powered reservation system. It presents Chef Marco’s three-generation culinary heritage while replacing phone bookings with real-time availability and automated confirmations.</p>
-        <a href="#contact" style={{background:'#6E1F2B',color:'white',padding:'16px 32px',borderRadius:'50px',textDecoration:'none',fontWeight:'bold',display:'inline-block'}}>Get In Touch</a>
-      </section>
-      <section id="nav_sticky" style={{padding:'80px 40px',textAlign:'center'}}>
-        <h2 style={{fontSize:'2rem',fontWeight:'700',marginBottom:'16px',color:'#F4EBDD'}}>nav_sticky</h2>
-        <p style={{color:'#666',maxWidth:'500px',margin:'0 auto'}}>Contact us to learn more about our nav_sticky offerings.</p>
-      </section>
-      <section id="hero_split" style={{padding:'80px 40px',textAlign:'center'}}>
-        <h2 style={{fontSize:'2rem',fontWeight:'700',marginBottom:'16px',color:'#F4EBDD'}}>hero_split</h2>
-        <p style={{color:'#666',maxWidth:'500px',margin:'0 auto'}}>Contact us to learn more about our hero_split offerings.</p>
-      </section>
-      <section id="stats_banner" style={{padding:'80px 40px',textAlign:'center'}}>
-        <h2 style={{fontSize:'2rem',fontWeight:'700',marginBottom:'16px',color:'#F4EBDD'}}>stats_banner</h2>
-        <p style={{color:'#666',maxWidth:'500px',margin:'0 auto'}}>Contact us to learn more about our stats_banner offerings.</p>
-      </section>
-      <section id="about_split" style={{padding:'80px 40px',textAlign:'center'}}>
-        <h2 style={{fontSize:'2rem',fontWeight:'700',marginBottom:'16px',color:'#F4EBDD'}}>about_split</h2>
-        <p style={{color:'#666',maxWidth:'500px',margin:'0 auto'}}>Contact us to learn more about our about_split offerings.</p>
-      </section>
-      <section id="menu_categories" style={{padding:'80px 40px',textAlign:'center'}}>
-        <h2 style={{fontSize:'2rem',fontWeight:'700',marginBottom:'16px',color:'#F4EBDD'}}>menu_categories</h2>
-        <p style={{color:'#666',maxWidth:'500px',margin:'0 auto'}}>Contact us to learn more about our menu_categories offerings.</p>
-      </section>
-      <footer style={{background:'#F4EBDD',color:'white',padding:'30px',textAlign:'center'}}>
-        <p>Copyright 2026 Project 1788850077185. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+  return <main>
+    <header className="site-header"><a className="wordmark" href="#home">La Cucina <span>di Marco</span></a><nav aria-label="Main navigation"><a className="active" href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#reservations">Reservations</a><a href="#contact">Contact</a></nav><a className="button header-button" href="#reservations">Reserve a table</a><MenuIcon className="menu-icon" aria-label="Open menu" /></header>
+    <section className="hero" id="home"><div className="hero-copy"><p className="eyebrow">Authentic Italian. Timeless hospitality.</p><h1>A taste of Italy.<br/>A memory forever.</h1><div className="brush"/><p className="intro">La Cucina di Marco is an intimate Italian restaurant inspired by the rustic elegance of Tuscany and the art of gathering around the table.</p><div className="hero-actions"><a className="button" href="#reservations">Reserve a table</a><a className="text-link" href="#menu">Explore our menu <ArrowRight size={17}/></a></div></div><div className="hero-art" role="img" aria-label="A candlelit table in a rustic Tuscan dining room"><div className="arch"><div className="landscape"/></div><div className="chandelier">✦</div><div className="table"><span/><span/><span/><span/></div></div></section>
+    <section className="stats" aria-label="Restaurant highlights"><div><Grape/><strong>1788</strong><b>Inspired by heritage</b><p>Centuries of Italian tradition<br/>on your plate.</p></div><div><Star/><strong>5.0</strong><b>Guest rating</b><p>Loved by our guests,<br/>consistently.</p></div><div><Building2/><strong>120</strong><b>Intimate seats</b><p>Designed for meaningful<br/>connections.</p></div><div><Wine/><strong>250+</strong><b>Fine Italian wines</b><p>Curated labels from<br/>iconic regions.</p></div></section>
+    <section className="story" id="about"><div className="story-copy"><p className="eyebrow">Our story</p><h2>Rooted in Tuscany.<br/>Made for today.</h2><div className="brush"/><p>La Cucina di Marco was born from a love of Italy’s rich culinary heritage and the timeless beauty of Tuscany. Every detail—from hand-selected ingredients to our warm, rustic interiors—reflects our belief in honest food, gracious hospitality, and the art of slowing down.</p><a className="button" href="#contact">Learn our story</a></div><div className="story-art" role="img" aria-label="The vine-covered stone entrance to La Cucina di Marco"><div className="plaque">La Cucina<br/><span>di Marco</span></div><div className="door"/></div></section>
+    <section className="menu-section" id="menu"><p className="eyebrow centered">Our menu</p><h2>Italian classics, crafted with passion.</h2><div className="brush centered-brush"/><div className="tabs"><span className="selected">Antipasti</span><span>Pasta</span><span>Secondi</span><span>Dolci</span><span>Wines</span></div><div className="dishes">{dishes.map(dish=><article key={dish.name}><div className={`dish-art ${dish.className}`}><span/></div><div className="dish-copy"><div><h3>{dish.name}</h3><em>{dish.price}</em></div><p>{dish.description}</p><i/></div></article>)}</div><a className="button menu-button" href="#menu">View full menu</a></section>
+    <section className="reservation" id="reservations"><div><p className="eyebrow">An evening to remember</p><h2>Your table is waiting.</h2></div><a className="button light-button" href="mailto:reservations@lacucinadimarco.it">Reserve a table</a></section>
+    <footer id="contact"><div className="footer-brand"><a className="wordmark" href="#home">La Cucina <span>di Marco</span></a><p>Authentic Italian. Timeless hospitality.</p><div className="social"><Instagram/><Facebook/><Wine/></div></div><div><h4>Visit us</h4><p><MapPin size={15}/> 1788 Via della Collina<br/>Firenze, Tuscany 50022<br/>Italy</p><a href="https://maps.google.com">View on map</a></div><div><h4>Hours</h4><p><Clock3 size={15}/> Tuesday — Sunday<br/>5:00 PM — 11:00 PM</p><p>Closed Monday</p></div><div><h4>Reservations</h4><p>+39 055 1788 5007<br/>ciao@lacucinadimarco.it</p><a className="footer-button" href="#reservations">Reserve a table</a></div><div className="copyright">© 2026 La Cucina di Marco. All rights reserved. <span>Privacy policy &nbsp;&nbsp; Terms &amp; conditions</span></div></footer>
+  </main>;
 }
